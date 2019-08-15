@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+.spinner{
+    padding-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cb{
+    margin-left: 20%
+}
+.tablero{
+    padding-top: 6rem
+}
+.text{
+    font-family: 'Nunito', sans-serif;   
+}
