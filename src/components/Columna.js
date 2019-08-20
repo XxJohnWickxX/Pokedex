@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import '../styles/Tablero.css'
+import { Spinner} from 'reactstrap';
 
 
 class Columna extends Component {
@@ -32,13 +33,24 @@ class Columna extends Component {
     render() {
         
         return(
+            
                 <table>
                     <tbody>
+                    {this.state.descrip ? (
                         <tr>
                            {this.state.descrip}
                         </tr>
+                        ) : (
+                        <span className="spinner">
+                             <Spinner style={{ width: '3rem', height: '3rem' }} type="grow" />
+                        </span>
+                         )}  
                     </tbody>
                 </table> 
+
+            
+               
+                
             
                  
         );

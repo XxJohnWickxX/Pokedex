@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import '../styles/Tablero.css'
 import { Spinner} from 'reactstrap';
 
+
 class Img extends Component {
 /**Se declara el estado del componente */
     state = {
@@ -25,9 +26,16 @@ class Img extends Component {
         return(
                 <table>
                     <tbody>
+                    {this.state.imagenUrl ? (
                         <tr>
                             <img src={this.state.imagenUrl}></img>
                         </tr>
+                        ) : (
+                        <span className="spinner">
+                             <Spinner style={{ width: '3rem', height: '3rem' }} />{' '}
+                        </span>
+                        )}
+                        
                     </tbody>
                 </table> 
         );

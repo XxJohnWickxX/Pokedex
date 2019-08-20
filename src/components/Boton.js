@@ -2,6 +2,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
+import { Link } from 'react-router-dom'
 
 /**Se utiliza rl formato de boton de la libreria Material-UI */
 const useStyles = makeStyles(theme => ({
@@ -18,9 +19,12 @@ const Boton = () => {
 
   return (
     <div>
-      <Button variant="contained" color="secondary" className={classes.button}>
+      <Link to="/pokemon-page-1">
+        <Button variant="contained" color="secondary" className={classes.button}>
         Ingresa Ahora
       </Button>
+      </Link>
+      
       <input
         accept="image/*"
         className={classes.input}
